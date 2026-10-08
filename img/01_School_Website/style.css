@@ -1,0 +1,308 @@
+/*
+  ╔══════════════════════════════════════════════════════╗
+  ║  ACTIVITY 01 — School Website  |  style.css          ║
+  ╚══════════════════════════════════════════════════════╝
+
+  CSS CONCEPTS PRACTICED:
+  - CSS Custom Properties (variables) with :root
+  - Flexbox layout (nav, about-grid, cards-grid)
+  - CSS Grid (cards-grid)
+  - Box model (padding, margin, border-radius)
+  - Background colors and text colors
+  - Responsive design with media queries
+*/
+
+/* ── CSS VARIABLES (change these to restyle everything!) ── */
+:root {
+  --color-primary:    #1a3c6e;   /* dark blue — main brand color   */
+  --color-accent:     #f5a623;   /* gold — buttons and highlights   */
+  --color-bg:         #f4f6f9;   /* light grey — page background    */
+  --color-bg-card:    #ffffff;   /* white — card background         */
+  --color-text:       #333333;   /* dark grey — body text           */
+  --color-text-light: #666666;   /* medium grey — secondary text    */
+  --font-main:        'Segoe UI', Arial, sans-serif;
+  --radius:           8px;
+  --shadow:           0 2px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* ── RESET & BASE ──────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── CONTAINER ─────────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── HEADER & NAV ──────────────────────────────────────── */
+.site-header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;              /* puts logo and nav side by side */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.school-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.main-nav a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+/* ── HERO ──────────────────────────────────────────────── */
+.hero {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(135deg, #1a3c6e 60%, #2e6bc4 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 24px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  color: #c8d9f0;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  padding: 14px 40px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+/* ── SECTION TITLE ─────────────────────────────────────── */
+.section-title {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 60px;
+}
+
+/* ── ABOUT SECTION ─────────────────────────────────────── */
+.about-section {
+  background-color: var(--color-bg-card);
+  padding-bottom: 60px;
+}
+
+.about-grid {
+  display: flex;          /* side-by-side text and image */
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  color: var(--color-text-light);
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+/* ── PROGRAMS SECTION ──────────────────────────────────── */
+.programs-section {
+  background-color: var(--color-bg);
+  padding-bottom: 60px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 equal columns */
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.card-body p {
+  color: var(--color-text-light);
+  font-size: 0.93rem;
+}
+
+/* ── NEWS SECTION ──────────────────────────────────────── */
+.news-section {
+  background-color: var(--color-bg-card);
+  padding-bottom: 60px;
+}
+
+.news-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.news-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.97rem;
+  color: var(--color-text);
+}
+
+.news-date {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ── CONTACT SECTION ───────────────────────────────────── */
+.contact-section {
+  background-color: var(--color-bg);
+  padding-bottom: 60px;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 2.2;
+  color: var(--color-text-light);
+}
+
+/* ── FOOTER ────────────────────────────────────────────── */
+.site-footer {
+  background-color: var(--color-primary);
+  color: #c8d9f0;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.88rem;
+}
+
+/* ── RESPONSIVE — TABLET (≤ 768px) ────────────────────── */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;   /* stack on smaller screens */
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;   /* single column */
+  }
+
+  .main-nav {
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ── RESPONSIVE — MOBILE (≤ 480px) ────────────────────── */
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+}

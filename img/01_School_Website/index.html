@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════╗
+  ║  ACTIVITY 01 — School Website                        ║
+  ║  Student Name: Aiannah Gaile C.Dahe                  ║
+  ║  Section:      STE John Dalton                       ║
+  ║  Date:         09/29/26                              ║
+  ╚══════════════════════════════════════════════════════╝
+  LEARNING GOALS:
+  - Build a multi-section webpage layout
+  - Use semantic HTML5 elements (header, nav, main, section, footer)
+  - Link an external CSS stylesheet
+  - Create a navigation bar with anchor links
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunshine Academy</title>
+  <!-- External stylesheet — all styles live in style.css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER & NAVIGATION ───────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="img.png"Mfnhs" />
+        <span class="school-name">Manolo Fortich National High school-name</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO SECTION ──────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Sunshine Academy</h1>
+      <p>Empowering students to achieve excellence through quality education.</p>
+      <a href="#programs" class="btn-primary">Explore Programs</a>
+    </div>
+  </section>
+
+  <!-- ── ABOUT SECTION ─────────────────────────────────── -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Our School</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Sunshine Academy has been shaping bright futures since 1990. We believe every student has the potential to succeed with the right guidance and environment.</p>
+          <p>Our dedicated faculty and modern facilities ensure a top-tier learning experience for all students from Grade 7 to Grade 12.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://placehold.co/500x320/1a3c6e/ffffff?text=School+Building" alt="School Building" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROGRAMS SECTION ──────────────────────────────── -->
+  <section class="programs-section" id="programs">
+    <div class="container">
+      <h2 class="section-title">Our Programs</h2>
+      <div class="cards-grid">
+
+        <div class="card">
+          <img src="https://placehold.co/360x200/e8f0fe/1a3c6e?text=STEM" alt="STEM Program" />
+          <div class="card-body">
+            <h3>STEM Strand</h3>
+            <p>Science, Technology, Engineering, and Mathematics for future innovators.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://placehold.co/360x200/e8f0fe/1a3c6e?text=HUMSS" alt="HUMSS Program" />
+          <div class="card-body">
+            <h3>HUMSS Strand</h3>
+            <p>Humanities and Social Sciences developing critical thinkers and leaders.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://placehold.co/360x200/e8f0fe/1a3c6e?text=ABM" alt="ABM Program" />
+          <div class="card-body">
+            <h3>ABM Strand</h3>
+            <p>Accountancy, Business, and Management for future entrepreneurs.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWS SECTION ──────────────────────────────────── -->
+  <section class="news-section" id="news">
+    <div class="container">
+      <h2 class="section-title">Latest News</h2>
+      <ul class="news-list">
+        <li><span class="news-date">September 15, 2026</span> — Enrollment for S.Y. 2026–2027 is now open.</li>
+        <li><span class="news-date">August 20, 2026</span> — Sunshine Academy wins Regional Science Fair.</li>
+        <li><span class="news-date">July 30, 2026</span> — New computer laboratory inauguration ceremony.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── CONTACT SECTION ───────────────────────────────── -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-info">
+        <p>📍 123 School Road, Manila, Philippines</p>
+        <p>📞 (02) 8123-4567</p>
+        <p>✉️ info@sunshineacademy.edu.ph</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Sunshine Academy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
